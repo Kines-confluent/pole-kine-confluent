@@ -23,9 +23,10 @@
 
 body {
   font-family: Charter, 'Iowan Old Style', Georgia, serif;
+  font-size: 17px;
   color: var(--text);
   background: var(--bg);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -81,7 +82,7 @@ body {
 
 .hero h1 {
   font-family: 'Avenir Next', Avenir, system-ui, sans-serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
   font-weight: 300;
   line-height: 1.15;
   text-wrap: balance;
@@ -94,8 +95,8 @@ body {
 }
 
 .hero-desc {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.65);
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.72);
   max-width: 560px;
   line-height: 1.6;
 }
@@ -501,6 +502,7 @@ a.chip:hover {
 
 /* ─── Responsive ─── */
 @media (max-width: 640px) {
+  html { font-size: 17px; }
   .hero { padding: 3.5rem 1.25rem 3rem; }
   .container { padding: 0 1.25rem; }
   section { padding: 2.5rem 0; }
@@ -509,6 +511,17 @@ a.chip:hover {
   .team-grid,
   .info-grid { grid-template-columns: 1fr; }
   .inst { padding: 1.25rem 1.4rem; }
+  .person-contact { font-size: 0.88rem; line-height: 1.8; }
+  .person-contact a { padding: 0.15rem 0; }
+  .spec-card p { font-size: 0.95rem; line-height: 1.6; }
+  .spec-card h3 { font-size: 1.1rem; }
+  .ptag { font-size: 0.78rem; padding: 0.3rem 0.6rem; }
+  .chip { font-size: 0.75rem; padding: 0.35rem 0.7rem; }
+  .spec-name { font-size: 0.82rem; padding: 0.25rem 0.6rem; }
+  details summary { font-size: 0.82rem !important; }
+  details div { font-size: 0.82rem !important; line-height: 1.9 !important; }
+  .inst p { font-size: 0.92rem; line-height: 1.6; }
+  .info-box p, .info-box address { font-size: 0.92rem; line-height: 1.6; }
 }
 
 .spec-name {
@@ -535,20 +548,6 @@ a.chip:hover {
     <div class="hero-eyebrow sans">Hôpital Privé du Confluent &middot; Vivalto Santé</div>
     <h1>Pôle de <strong>Kinésithérapie</strong> du Confluent</h1>
     <p class="hero-desc">Une équipe de masseurs-kinésithérapeutes diplômés d'État réunis au sein de l'Hôpital Privé du Confluent, couvrant une palette large de spécialités en rééducation.</p>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">13</div>
-        <div class="stat-label">Kinésithérapeutes</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">9</div>
-        <div class="stat-label">Spécialités</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">32°C</div>
-        <div class="stat-label">Balnéothérapie</div>
-      </div>
-    </div>
   </div>
 </header>
 
@@ -561,21 +560,21 @@ a.chip:hover {
     </div>
     <div class="specialty-grid">
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-traumato">
         <div class="spec-icon">🦴</div>
         <h3>Traumato-orthopédie</h3>
         <p>Prise en charge postopératoire et conservatrice des pathologies musculo-squelettiques du rachis et des membres.<br>Retour au sport après blessure, prévention et réathlétisation.<br><em style="color: #8a7a5a; font-size: 0.9em;">Entorse, fracture, prothèse (genou, hanche), arthrose, rupture des ligaments croisés (LCA)</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#thibault" class="spec-name" style="background: rgba(106,138,26,0.12); color: #6a8a1a;">Thibault</a> <a href="#enguerrand" class="spec-name" style="background: rgba(0,46,93,0.10); color: #002E5D;">Enguerrand</a> <a href="#manon" class="spec-name" style="background: rgba(42,102,144,0.12); color: #2a6690;">Manon</a> <a href="#franck" class="spec-name" style="background: rgba(106,138,26,0.12); color: #6a8a1a;">Franck</a> <a href="#gwladys" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Gwladys</a> <a href="#amelie" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Amélie</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-therapie-manuelle">
         <div class="spec-icon">🤲</div>
         <h3>Thérapie manuelle</h3>
         <p>Techniques manuelles de mobilisation articulaire et tissulaire pour les troubles musculo-squelettiques.<br><em style="color: #8a7a5a; font-size: 0.9em;">Mal de dos, lumbago, torticolis, blocage articulaire</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#olivier" class="spec-name" style="background: rgba(45,122,126,0.10); color: #2d7a7e;">Olivier</a> <a href="#franck" class="spec-name" style="background: rgba(106,138,26,0.12); color: #6a8a1a;">Franck</a> <a href="#enguerrand" class="spec-name" style="background: rgba(0,46,93,0.10); color: #002E5D;">Enguerrand</a> <a href="#thibault" class="spec-name" style="background: rgba(106,138,26,0.12); color: #6a8a1a;">Thibault</a> <a href="#gwladys" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Gwladys</a> <a href="#francois" class="spec-name" style="background: rgba(45,122,126,0.10); color: #2d7a7e;">François</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-cardio">
         <div class="spec-icon">🫁</div>
         <h3>Réentraînement à l'effort et réadaptation cardio-respiratoire</h3>
         <p>Rééducation cardio-respiratoire et réentraînement à l’effort au sein du SSR cardiaque du Confluent.<br><em style="color: #8a7a5a; font-size: 0.9em;">Essoufflement, BPCO, reprise après chirurgie cardiaque (stent, pontage, opération de valve), reconditionnement à l’effort, surpoids</em></p>
@@ -583,63 +582,63 @@ a.chip:hover {
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#gwladys" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Gwladys</a> <a href="#amelie" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Amélie</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-epaule">
         <div class="spec-icon">💪</div>
         <h3>Rééducation de l'épaule — Institut IEC</h3>
         <p>Bilans pré- et postopératoires au sein de l'Institut de l'Épaule du Confluent.<br><em style="color: #8a7a5a; font-size: 0.9em;">Épaule gelée ou raide (capsulite rétractile), tendinite (tendinopathie), conflit sous-acromial, dyskinésie scapulaire</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#thibault" class="spec-name" style="background: rgba(106,138,26,0.12); color: #6a8a1a;">Thibault</a> <a href="#olivier" class="spec-name" style="background: rgba(45,122,126,0.10); color: #2d7a7e;">Olivier</a> <a href="#amelie" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Amélie</a> <a href="#franck" class="spec-name" style="background: rgba(106,138,26,0.12); color: #6a8a1a;">Franck</a> <a href="#manon" class="spec-name" style="background: rgba(42,102,144,0.12); color: #2a6690;">Manon</a> <a href="#alison" class="spec-name" style="background: rgba(0,46,93,0.10); color: #002E5D;">Alison</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-main">
         <div class="spec-icon">✋</div>
         <h3>Rééducation de la main</h3>
         <p>Prise en charge spécialisée pré- et postopératoire des pathologies de la main et du poignet.<br><em style="color: #8a7a5a; font-size: 0.9em;">Canal carpien, doigt à ressaut, tendinite du poignet, fracture de la main</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#manon" class="spec-name" style="background: rgba(42,102,144,0.12); color: #2a6690;">Manon</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-pied">
         <div class="spec-icon">🦶</div>
         <h3>Rééducation pied - cheville</h3>
         <p>Prise en charge spécifique pré- et postopératoire des pathologies du pied et de la cheville.<br><em style="color: #8a7a5a; font-size: 0.9em;">Entorse de cheville, tendinite d'Achille, fasciite plantaire (douleur au talon), hallux valgus</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#enguerrand" class="spec-name" style="background: rgba(0,46,93,0.10); color: #002E5D;">Enguerrand</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-neuro">
         <div class="spec-icon">🧠</div>
         <h3>Rééducation neurologique</h3>
         <p>Rééducation des pathologies neurologiques centrales et périphériques.<br><em style="color: #8a7a5a; font-size: 0.9em;">AVC (hémiplégie), maladie de Parkinson, sclérose en plaques, troubles de la marche et de l'équilibre</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#alison" class="spec-name" style="background: rgba(0,46,93,0.10); color: #002E5D;">Alison</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-vestibulaire">
         <div class="spec-icon">🌀</div>
         <h3>Rééducation vestibulaire</h3>
         <p>Bilan et rééducation des troubles vestibulaires.<br><em style="color: #8a7a5a; font-size: 0.9em;">Vertiges, vertiges positionnels (VPPB), perte d'équilibre, sensations d'instabilité</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#rodolphe" class="spec-name" style="background: rgba(107,85,32,0.10); color: #6b5520;">Rodolphe</a> <a href="#gaetan" class="spec-name" style="background: rgba(107,85,32,0.10); color: #6b5520;">Gaëtan</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-perinee">
         <div class="spec-icon">🧘‍♀️</div>
         <h3>Rééducation pelvi-périnéale et abdominale</h3>
         <p>Rééducation pelvi-périnéale féminine, prise en charge pré- et postpartum.<br><em style="color: #8a7a5a; font-size: 0.9em;">Fuites urinaires (incontinence), douleurs pelviennes</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#amelie" class="spec-name" style="background: rgba(160,60,60,0.10); color: #8a3535;">Amélie</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-maxillo">
         <div class="spec-icon">💆</div>
         <h3>Rééducation maxillo-faciale &amp; Ostéopathie</h3>
         <p>Kinésithérapie maxillo-faciale des troubles de l'articulation temporo-mandibulaire (ATM) et ostéopathie.<br><em style="color: #8a7a5a; font-size: 0.9em;">Mâchoire bloquée, mâchoire qui craque, bruxisme, douleur à la mâchoire</em></p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#francois" class="spec-name" style="background: rgba(45,122,126,0.10); color: #2d7a7e;">François</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-senologie">
         <div class="spec-icon">🎗️</div>
         <h3>Sénologie &amp; Oncologie</h3>
         <p>Prise en charge pré- et postopératoire dans le cadre du cancer du sein. Endermologie (LPG), Pilates adapté, sport adapté, aromathérapie.<br><em style="color: #8a7a5a; font-size: 0.9em;">Gros bras (lymphoedème), rééducation après mastectomie, drainage lymphatique</em><br><br>Également fondatrices de l'association En Coeur et en Corps pour l'accompagnement post-cancer.</p>
         <div class="spec-who" style="display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem;"><a href="#audrey" class="spec-name" style="background: rgba(90,138,92,0.10); color: #5a8a5c;">Audrey</a> <a href="#axelle" class="spec-name" style="background: rgba(90,138,92,0.10); color: #5a8a5c;">Axelle</a></div>
       </div>
 
-      <div class="spec-card">
+      <div class="spec-card" id="spec-douleur">
         <div class="spec-icon">🔥</div>
         <h3>Douleur chronique</h3>
         <p>Bilan complet pour construire ensemble un programme sur mesure suivant vos objectifs : réhabituation progressive, rééducation fonctionnelle, échanges autour de la douleur pour une meilleure compréhension et pour retrouver un confort au quotidien.<br><em style="color: #8a7a5a; font-size: 0.9em;">Mal de dos (lombalgie), sciatique (sciatalgie), douleurs cervicales (cervicalgies), névralgie cervico-brachiale, fibromyalgie, algodystrophie (SDRC)</em></p>
@@ -671,9 +670,9 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Traumato-ortho, balnéothérapie</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a;">Épaule</span>
+              <a href="#spec-epaule" class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a; text-decoration: none; cursor: pointer;">Épaule</a>
               <span class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a;">Balnéo</span>
-              <span class="ptag" style="background: #7a9e22; color: #ffffff;">IEC</span>
+              <a href="#bloc-iec" class="ptag" style="background: #7a9e22; color: #ffffff; text-decoration: none; cursor: pointer;">IEC</a>
             </div>
             <div class="person-contact">07 80 94 18 18 · <a href="https://www.doctolib.fr/masseur-kinesitherapeute/reze/thibault-leduc" target="_blank">Doctolib</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://www.iec-nantes.fr" target="_blank">IEC</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2022, IFM3R Nantes)<br>- Thérapie manuelle<br>- Balnéothérapie</div></details>
@@ -688,9 +687,9 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Traumato-ortho, spécialité du pied</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(0,46,93,0.1); color: #002E5D;">Pied</span>
-              <span class="ptag" style="background: rgba(0,46,93,0.1); color: #002E5D;">Thérapie manuelle</span>
-              <span class="ptag" style="background: rgba(90,181,212,0.15); color: #1a5c6e;">Balnéo</span>
+              <a href="#spec-pied" class="ptag" style="background: rgba(0,46,93,0.1); color: #002E5D; text-decoration: none; cursor: pointer;">Pied</a>
+              <a href="#spec-therapie-manuelle" class="ptag" style="background: rgba(0,46,93,0.1); color: #002E5D; text-decoration: none; cursor: pointer;">Thérapie manuelle</a>
+              <a href="#bloc-balneo" class="ptag" style="background: rgba(90,181,212,0.15); color: #1a5c6e; text-decoration: none; cursor: pointer;">Balnéo</a>
             </div>
             <div class="person-contact">02 28 25 59 69 · <a href="https://www.doctolib.fr/masseur-kinesitherapeute/reze/enguerrand-de-ponnat" target="_blank">Doctolib</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/344" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://www.specialiste-pied-cheville.fr" target="_blank" style="color: #2d7a7e;">4PC</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2006)<br>- Thérapie manuelle ostéopathique<br>- Spécialisation pied-cheville (4PC)</div></details>
@@ -705,9 +704,9 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Thérapie manuelle</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(58,138,140,0.1); color: #2d7a7e;">Thérapie manuelle</span>
-              <span class="ptag ptag--iec">IEC</span>
-              <span class="ptag" style="background: rgba(90,181,212,0.15); color: #1a5c6e;">Balnéo</span>
+              <a href="#spec-therapie-manuelle" class="ptag" style="background: rgba(58,138,140,0.1); color: #2d7a7e; text-decoration: none; cursor: pointer;">Thérapie manuelle</a>
+              <a href="#bloc-iec" class="ptag ptag--iec" style="text-decoration: none; cursor: pointer;">IEC</a>
+              <a href="#bloc-balneo" class="ptag" style="background: rgba(90,181,212,0.15); color: #1a5c6e; text-decoration: none; cursor: pointer;">Balnéo</a>
             </div>
             <div class="person-contact">06 13 23 56 20 · <a href="https://www.doctolib.fr/masseur-kinesitherapeute/reze/olivier-kremer" target="_blank">Doctolib</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://www.iec-nantes.fr" target="_blank">IEC</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (IFM3R Nantes)<br>- Thérapie manuelle</div></details>
@@ -722,9 +721,9 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Cardio-respiratoire, traumato-orthopédie, thérapie manuelle</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(180,80,80,0.1); color: #9b4a4a;">Cardio-respiratoire</span>
-              <span class="ptag" style="background: rgba(180,80,80,0.1); color: #9b4a4a;">Traumato</span>
-              <span class="ptag" style="background: #c47070; color: #ffffff;">SSR Cardio</span>
+              <a href="#spec-cardio" class="ptag" style="background: rgba(180,80,80,0.1); color: #9b4a4a; text-decoration: none; cursor: pointer;">Cardio-respiratoire</a>
+              <a href="#spec-traumato" class="ptag" style="background: rgba(180,80,80,0.1); color: #9b4a4a; text-decoration: none; cursor: pointer;">Traumato</a>
+              <a href="#bloc-ssr" class="ptag" style="background: #c47070; color: #ffffff; text-decoration: none; cursor: pointer;">SSR Cardio</a>
             </div>
             <div class="person-contact">06 70 71 53 58 · <a href="https://www.doctolib.fr/masseur-kinesitherapeute/reze/gwladys-kerrand" target="_blank">Doctolib</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/435" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (HEP2A, Belgique)<br>- Méthode CGE (Concept Global de l’Épaule)<br>- Neurodynamique<br>- Réadaptation cardio-respiratoire<br>- Réathlétisation</div></details>
@@ -739,10 +738,10 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Traumato-orthopédie, cardio-respiratoire, périnéologie, douleur persistante et complexe</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(138,100,180,0.12); color: #7a5aad;">Périnée</span>
-              <span class="ptag">Douleur</span>
-              <span class="ptag ptag--iec">IEC</span>
-              <span class="ptag" style="background: #c47070; color: #ffffff;">SSR Cardio</span>
+              <a href="#spec-perinee" class="ptag" style="background: rgba(138,100,180,0.12); color: #7a5aad; text-decoration: none; cursor: pointer;">Périnée</a>
+              <a href="#spec-douleur" class="ptag" style="text-decoration: none; cursor: pointer;">Douleur</a>
+              <a href="#bloc-iec" class="ptag ptag--iec" style="text-decoration: none; cursor: pointer;">IEC</a>
+              <a href="#bloc-ssr" class="ptag" style="background: #c47070; color: #ffffff; text-decoration: none; cursor: pointer;">SSR Cardio</a>
             </div>
             <div class="person-contact">06 65 73 79 75 · <a href="https://www.doctolib.fr/masseur-kinesitherapeute/reze/amelie-floch" target="_blank">Doctolib</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://www.iec-nantes.fr" target="_blank">IEC</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2021, IFM3R Nantes)<br>- M1 Santé Publique (Nancy)<br>- M2 EAD Santé Publique (ISPED Bordeaux, 2026)<br><br><br><strong>En cours :</strong><br>- ⏳ Neurologie et gériatrie — Littré B. &amp; Meilhou L. (2026)<br>- ⏳ Exercice et troubles du système nerveux — Perreau C. (2025)<br>- ⏳ Kinéathlétisation — Castel A. (2025)<br><br><br><strong>Formations continues :</strong><br>- Troubles neurologiques en MSK — Littré B. (2025)<br>- Troubles neuro-périphériques en MSK — Galan M. (2025)<br>- Troubles vasculaires en MSK — Littré B. &amp; Ferrand O. (2024)<br>- Troubles psychologiques et douleur — Couly A. (2024)<br>- Accès direct en MSK : évaluer et orienter (2024)<br>- Douleur complexe — Halimi A. (2024)<br>- Communication thérapeutique et hypnose — Chaumeil T. (2024)<br>- Torticolis et déformations crâniennes du nourrisson — Chevalier B. (2023)<br>- Neuropathies et syndromes canalaires — Angelliaume F. (2023)<br>- SDRC en rééducation — Acapo S. &amp; Osinski T. (2023)<br>- Méthode 1SK — Halimi A. &amp; Chaumeil T. (2023)<br>- Épaule opérée — Youssef A. &amp; Delos G. (2023)<br>- Know Pain (douleur persistante) — Stewart M. (2023)<br>- Épaule EB Pratique — Delos G. &amp; Youssef A. (2023)<br>- Rééducation du genou — Fabri S. (2022)<br>- Périnéologie EBP module Femme — Hapillon F. (2022)<br>- Épaule en accès direct — Srour F. (2022)</div></details>
@@ -765,9 +764,9 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Épaule, thérapie manuelle</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a;">Épaule</span>
-              <span class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a;">Thérapie manuelle</span>
-              <span class="ptag" style="background: #7a9e22; color: #ffffff;">IEC</span>
+              <a href="#spec-epaule" class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a; text-decoration: none; cursor: pointer;">Épaule</a>
+              <a href="#spec-therapie-manuelle" class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a; text-decoration: none; cursor: pointer;">Thérapie manuelle</a>
+              <a href="#bloc-iec" class="ptag" style="background: #7a9e22; color: #ffffff; text-decoration: none; cursor: pointer;">IEC</a>
             </div>
             <div class="person-contact">02 28 25 56 95 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://www.iec-nantes.fr" target="_blank">IEC</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (1988, EFOM Paris)<br>- Certificat thérapie manuelle (EFOM)<br>- DU Anatomie de l’appareil locomoteur (Bordeaux)<br>- Formateur IFM3R<br>- Membre SFRE</div></details>
@@ -782,11 +781,11 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Main et poignet (Centre Main Sud Loire), épaule, rachis, biomécanique du coureur, balnéothérapie</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(51,153,204,0.12); color: #2a6690;">Main</span>
-              <span class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a;">Épaule</span>
-              <span class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a;">Rachis</span>
-              <span class="ptag" style="background: rgba(51,153,204,0.12); color: #2a6690;">Balnéo</span>
-              <span class="ptag ptag--iec">IEC</span>
+              <a href="#spec-main" class="ptag" style="background: rgba(51,153,204,0.12); color: #2a6690; text-decoration: none; cursor: pointer;">Main</a>
+              <a href="#spec-epaule" class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a; text-decoration: none; cursor: pointer;">Épaule</a>
+              <a href="#spec-traumato" class="ptag" style="background: rgba(152,183,41,0.12); color: #6a8a1a; text-decoration: none; cursor: pointer;">Rachis</a>
+              <a href="#bloc-balneo" class="ptag" style="background: rgba(51,153,204,0.12); color: #2a6690; text-decoration: none; cursor: pointer;">Balnéo</a>
+              <a href="#bloc-iec" class="ptag ptag--iec" style="text-decoration: none; cursor: pointer;">IEC</a>
             </div>
             <div class="person-contact">07 56 84 44 09 · <a href="https://www.maiia.com/masseur-kinesitherapeute/44200-nantes/gaborit-manon" target="_blank">Maiia</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/197" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://centre-main-sud-loire.fr" target="_blank" style="color: #2a6690;">Centre Main Sud Loire</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2016, IFM3R Nantes)<br>- Épaule (Srour, 2018)<br>- McKenzie lombaire<br>- Runner’s Clinic (biomécanique du coureur)<br>- Main traumato-rhumato (Cevak, 2021)<br>- Main-poignet (Aissaoui, 2022 et 2025)</div></details>
@@ -801,8 +800,8 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Neurologie, thérapie manuelle</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(0,46,93,0.1); color: #002E5D;">Neurologie</span>
-              <span class="ptag ptag--iec">IEC</span>
+              <a href="#spec-neuro" class="ptag" style="background: rgba(0,46,93,0.1); color: #002E5D; text-decoration: none; cursor: pointer;">Neurologie</a>
+              <a href="#bloc-iec" class="ptag ptag--iec" style="text-decoration: none; cursor: pointer;">IEC</a>
             </div>
             <div class="person-contact">07 82 68 25 80 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://www.specialiste-pied-cheville.fr" target="_blank" style="color: #002E5D;">4PC</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2019, IFM3R Nantes)<br>- Thérapie manuelle<br>- Épaule (IEC)<br>- Spécialisation pied-cheville (4PC)</div></details>
@@ -817,7 +816,7 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute — Ostéopathe</div>
             <div class="person-spec">Ostéopathie, rééducation oro-maxillo-faciale (ATM)</div>
             <div class="person-tags">
-                            <span class="ptag" style="background: rgba(58,138,140,0.1); color: #2d7a7e;">Maxillo-facial</span>
+                            <a href="#spec-maxillo" class="ptag" style="background: rgba(58,138,140,0.1); color: #2d7a7e; text-decoration: none; cursor: pointer;">Maxillo-facial</a>
             </div>
             <div class="person-contact">02 28 25 59 03 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (IFM3R Nantes)<br>- DO Collège Ostéopathique de Sutherland<br>- EFOM Boris Dolto<br>- Ostéovox oro-faciale (IDHEO Nantes)<br>- Thérapie manuelle Péninou</div></details>
@@ -832,7 +831,7 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Rééducation vestibulaire, ostéopathie</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(180,150,80,0.15); color: #6b5520;">Vestibulaire</span>
+              <a href="#spec-vestibulaire" class="ptag" style="background: rgba(180,150,80,0.15); color: #6b5520; text-decoration: none; cursor: pointer;">Vestibulaire</a>
                           </div>
             <div class="person-contact">02 28 25 59 17 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/146" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://www.vestib.org/annuaire.html" target="_blank">SIRV</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (IFMK Nancy)<br>- DO (CSO Paris)<br>- DU Vertiges (Univ. Reims)<br>- DU Équilibration posturale (Univ. Reims)<br>- Réhabilitation vestibulaire (Sémont/SISMED)<br>- Membre SIRV et SFKV</div></details>
@@ -847,7 +846,7 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Rééducation vestibulaire</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(180,150,80,0.15); color: #6b5520;">Vestibulaire</span>
+              <a href="#spec-vestibulaire" class="ptag" style="background: rgba(180,150,80,0.15); color: #6b5520; text-decoration: none; cursor: pointer;">Vestibulaire</a>
             </div>
             <div class="person-contact">02 28 25 58 50 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://www.vestib.org/annuaire.html" target="_blank">SIRV</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (IFMK Strasbourg)<br>- DU Vertiges et Équilibre (Fac. Nantes, Pr Bordure, 2004-2005)<br>- Formation Sémont<br>- Nystagmographie DVNS/Synapsys<br>- VPPB Castellucci<br>- Membre SIRV, SFFRV, APTA</div></details>
@@ -862,11 +861,11 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Sénologie, oncologie, endermologie (LPG), Pilates adapté</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Sénologie</span>
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Oncologie</span>
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Endermologie</span>
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Pilates</span>
-              <span class="ptag" style="background: #a4c7a6; color: #ffffff;">En Coeur et en Corps 🌸</span>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Sénologie</a>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Oncologie</a>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Endermologie</a>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Pilates</a>
+              <a href="#bloc-asso" class="ptag" style="background: #a4c7a6; color: #ffffff; text-decoration: none; cursor: pointer;">En Coeur et en Corps 🌸</a>
             </div>
             <div class="person-contact">02 28 25 51 88 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/555" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://encoeuretencorps.fr" target="_blank" style="color: #5a8a5c;">En Coeur et en Corps</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2001)<br>- Au Confluent depuis 2003<br>- DU Rééducation vestibulaire<br>- Instructrice Pilates<br>- Expert endermothérapie (LPG)<br>- Cancer du sein<br>- Massage ayurvédique<br>- Praticienne EFT<br>- <strong>Formatrice</strong> (Noria Santé — cancer du sein)</div></details>
@@ -881,13 +880,13 @@ a.chip:hover {
             <div class="person-role">Kinésithérapeute</div>
             <div class="person-spec">Sénologie, oncologie, endermologie (LPG), aromathérapie, balnéothérapie</div>
             <div class="person-tags">
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Sénologie</span>
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Oncologie</span>
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Sport adapté</span>
-              <span class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c;">Aromathérapie</span>
-              <span class="ptag" style="background: #a4c7a6; color: #ffffff;">En Coeur et en Corps 🌸</span>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Sénologie</a>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Oncologie</a>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Sport adapté</a>
+              <a href="#spec-senologie" class="ptag" style="background: rgba(164,199,166,0.15); color: #5a8a5c; text-decoration: none; cursor: pointer;">Aromathérapie</a>
+              <a href="#bloc-asso" class="ptag" style="background: #a4c7a6; color: #ffffff; text-decoration: none; cursor: pointer;">En Coeur et en Corps 🌸</a>
             
-              <span class="ptag" style="background: rgba(90,181,212,0.15); color: #1a5c6e;">Balnéo</span></div>
+              <a href="#bloc-balneo" class="ptag" style="background: rgba(90,181,212,0.15); color: #1a5c6e; text-decoration: none; cursor: pointer;">Balnéo</a></div>
             <div class="person-contact">02 28 25 51 88 · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/403" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://encoeuretencorps.fr" target="_blank" style="color: #5a8a5c;">En Coeur et en Corps</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2015)<br>- Thérapie manuelle<br>- Cancer du sein<br>- Aromathérapie et cancer<br>- LPG Cellu M6</div></details>
             <details style="margin-top: 0.25rem;"><summary style="font-size: 0.75rem; color: #5a7a5a; cursor: pointer; font-style: italic; list-style: none;">Tarifs et conventionnement ▸</summary><div style="font-size: 0.75rem; color: #5a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- Séances : de 16,13 à 23,40 €<br>- Balnéothérapie : 25,16 €<br>- Conventionné</div></details>
@@ -908,7 +907,7 @@ a.chip:hover {
       <h2 class="section-title">Des prises en charge pluridisciplinaires intégrées</h2>
     </div>
 
-    <div class="inst" style="border-color: #c8d8a8; background: linear-gradient(135deg, #ffffff 0%, #f4f7ee 100%);">
+    <div class="inst" id="bloc-iec" style="border-color: #c8d8a8; background: linear-gradient(135deg, #ffffff 0%, #f4f7ee 100%);">
       <div>
         <span class="inst-badge" style="background: #7a9e22;">IEC</span>
         <h3 style="color: #3d5010;">Institut de l'Épaule du Confluent</h3>
@@ -934,7 +933,7 @@ a.chip:hover {
       </div>
     </div>
 
-    <div class="inst" style="border-color: #7abbd4; background: linear-gradient(135deg, #ffffff 0%, #eef7fa 100%);">
+    <div class="inst" id="bloc-balneo" style="border-color: #7abbd4; background: linear-gradient(135deg, #ffffff 0%, #eef7fa 100%);">
       <div>
         <span class="inst-badge" style="background: #5ab5d4;">Rééducation en milieu aquatique</span>
         <h3 style="color: #1a5c6e;">Balnéothérapie 🏊</h3>
@@ -957,7 +956,7 @@ a.chip:hover {
       </div>
     </div>
 
-    <div class="inst" style="border-color: #e0c0c0; background: linear-gradient(135deg, #ffffff 0%, #faf2f2 100%);">
+    <div class="inst" id="bloc-ssr" style="border-color: #e0c0c0; background: linear-gradient(135deg, #ffffff 0%, #faf2f2 100%);">
       <div>
         <span class="inst-badge" style="background: #c47070;">SSR Cardio</span>
         <h3 style="color: #6b2a2a;">Réadaptation cardiaque et cardiologie du sport</h3>
@@ -983,7 +982,7 @@ a.chip:hover {
       </div>
     </div>
 
-    <div class="inst" style="border-color: #c8dcc9; background: linear-gradient(135deg, #ffffff 0%, #f5f9f5 100%);">
+    <div class="inst" id="bloc-asso" style="border-color: #c8dcc9; background: linear-gradient(135deg, #ffffff 0%, #f5f9f5 100%);">
       <div>
         <span class="inst-badge" style="background: #a4c7a6;">Association</span>
         <h3 style="color: #2a403d;">En Coeur et en Corps <span style="font-size: 0.75em; font-weight: 400; color: #d897a0;">🌸</span></h3>
