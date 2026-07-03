@@ -411,6 +411,14 @@ section {
   color: var(--white);
   white-space: nowrap;
 }
+a.chip {
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+a.chip:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
 
 .chip--ghost {
   background: transparent;
@@ -780,7 +788,7 @@ section {
               <span class="ptag" style="background: rgba(51,153,204,0.12); color: #2a6690;">Balnéo</span>
               <span class="ptag ptag--iec">IEC</span>
             </div>
-            <div class="person-contact">07 56 84 44 09 · <a href="https://www.maiia.com/masseur-kinesitherapeute/44400-reze/manon+gaborit" target="_blank">Maiia</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/197" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://centre-main-sud-loire.fr" target="_blank" style="color: #2a6690;">Centre Main Sud Loire</a></div>
+            <div class="person-contact">07 56 84 44 09 · <a href="https://www.maiia.com/masseur-kinesitherapeute/44200-nantes/gaborit-manon" target="_blank">Maiia</a> · <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--text-2);">Confluent</a> · <a href="https://cpts-sevreetloire.fr/professional/197" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a> · <a href="https://centre-main-sud-loire.fr" target="_blank" style="color: #2a6690;">Centre Main Sud Loire</a></div>
             <details style="margin-top: 0.4rem;"><summary style="font-size: 0.75rem; color: #8a7a5a; cursor: pointer; font-style: italic; list-style: none;">Formations et diplômes ▸</summary><div style="font-size: 0.75rem; color: #8a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- MK DE (2016, IFM3R Nantes)<br>- Épaule (Srour, 2018)<br>- McKenzie lombaire<br>- Runner’s Clinic (biomécanique du coureur)<br>- Main traumato-rhumato (Cevak, 2021)<br>- Main-poignet (Aissaoui, 2022 et 2025)</div></details>
             <details style="margin-top: 0.25rem;"><summary style="font-size: 0.75rem; color: #5a7a5a; cursor: pointer; font-style: italic; list-style: none;">Tarifs et conventionnement ▸</summary><div style="font-size: 0.75rem; color: #5a7a5a; line-height: 1.8; margin-top: 0.3rem; padding: 0.4rem 0; border-top: 1px solid var(--border);">- Conventionné</div></details>
           </div>
@@ -907,12 +915,12 @@ section {
       </div>
       <p>Bilans pré- et postopératoires de l'épaule. Thérapie manuelle et travail actif, prise en charge individualisée. L'institut dispose d'une <strong>balnéothérapie en piscine chauffée à 32 °C</strong>.</p>
       <div class="chips">
-        <span class="chip" style="background: #7a9e22;">Amélie Floch</span>
-        <span class="chip" style="background: #7a9e22;">Thibault Leduc</span>
-        <span class="chip" style="background: #7a9e22;">Olivier Kremer</span>
-        <span class="chip" style="background: #7a9e22;">Franck Guais</span>
-        <span class="chip" style="background: #7a9e22;">Manon Gaborit</span>
-        <span class="chip" style="background: #7a9e22;">Alison Negrel</span>
+        <a href="#amelie" class="chip" style="background: #7a9e22; text-decoration: none; color: inherit;">Amélie Floch</a>
+        <a href="#thibault" class="chip" style="background: #7a9e22; text-decoration: none; color: inherit;">Thibault Leduc</a>
+        <a href="#olivier" class="chip" style="background: #7a9e22; text-decoration: none; color: inherit;">Olivier Kremer</a>
+        <a href="#franck" class="chip" style="background: #7a9e22; text-decoration: none; color: inherit;">Franck Guais</a>
+        <a href="#manon" class="chip" style="background: #7a9e22; text-decoration: none; color: inherit;">Manon Gaborit</a>
+        <a href="#alison" class="chip" style="background: #7a9e22; text-decoration: none; color: inherit;">Alison Negrel</a>
       </div>
       <div class="inst-detail">
         <div class="dl">
@@ -942,7 +950,9 @@ section {
           <span class="dt">Température</span>
           <span>32 °C</span>
           <span class="dt">Praticiens</span>
-          <span>Thibault, Enguerrand, Olivier, Manon, Gwladys, Axelle</span>
+          <span><a href="#thibault" style="color: inherit; text-decoration: underline dotted;">Thibault</a>, <a href="#enguerrand" style="color: inherit; text-decoration: underline dotted;">Enguerrand</a>, <a href="#olivier" style="color: inherit; text-decoration: underline dotted;">Olivier</a>, <a href="#manon" style="color: inherit; text-decoration: underline dotted;">Manon</a>, <a href="#gwladys" style="color: inherit; text-decoration: underline dotted;">Gwladys</a>, <a href="#axelle" style="color: inherit; text-decoration: underline dotted;">Axelle</a></span>
+          <span class="dt">Réservation</span>
+          <span><a href="https://www.doctolib.fr/cabinet-de-kinesitherapie/reze/balneotherapie-du-confluent" target="_blank" style="color: #1a5c6e; text-decoration: underline;">Doctolib — Balnéothérapie du Confluent</a></span>
         </div>
       </div>
     </div>
@@ -954,8 +964,8 @@ section {
       </div>
       <p>Reprise d'activité physique après un événement cardiovasculaire. Programme de <strong>4 semaines, 5 demi-journées par semaine</strong> alternant APA, rééducation et éducation thérapeutique. Capacité : 40 patients par jour.</p>
       <div class="chips">
-        <span class="chip" style="background: #c47070;">Amélie Floch</span>
-        <span class="chip" style="background: #c47070;">Gwladys Kerrand</span>
+        <a href="#amelie" class="chip" style="background: #c47070; text-decoration: none; color: inherit;">Amélie Floch</a>
+        <a href="#gwladys" class="chip" style="background: #c47070; text-decoration: none; color: inherit;">Gwladys Kerrand</a>
       </div>
       <div class="inst-detail">
         <div class="dl">
@@ -980,8 +990,8 @@ section {
       </div>
       <p>Association fondée le 8 mars 2023 par des kinésithérapeutes spécialisées en oncologie. <strong>Accompagnement en douceur des personnes touchées par le cancer</strong> après la fin des traitements, dans cette période de transition où le suivi médical s'allège brutalement. L'association organise également des événements ponctuels (ateliers, sorties, séjours) pour les personnes en rémission.</p>
       <div class="chips">
-        <span class="chip" style="background: #a4c7a6;">Audrey Richard</span>
-        <span class="chip" style="background: #a4c7a6;">Axelle Galvier</span>
+        <a href="#audrey" class="chip" style="background: #a4c7a6; text-decoration: none; color: inherit;">Audrey Richard</a>
+        <a href="#axelle" class="chip" style="background: #a4c7a6; text-decoration: none; color: inherit;">Axelle Galvier</a>
       </div>
       <div class="inst-detail">
         <div class="dl">
@@ -1045,14 +1055,14 @@ section {
           Hôpital Privé du Confluent<br>
           2-4 rue Éric Tabarly<br>
           44200 Nantes<br>
-          <strong>Porte 6 — 3<sup>e</sup> étage</strong>
+          <strong>Porte 6 — 3<sup>e</sup> étage — Ascenseur vert</strong>
         </address>
       </div>
 
       <div class="info-box">
         <h4>Rendez-vous</h4>
         <p>Prise de rendez-vous en ligne via <a href="https://www.doctolib.fr/cabinet-paramedical/reze/cabinet-de-kinesitherapie-du-confluent" target="_blank" style="color: var(--deep);">Doctolib</a> pour le Cabinet de Kinésithérapie du Confluent (Thibault, Enguerrand, Olivier, Gwladys, Amélie).</p>
-        <p style="margin-top: 0.5rem;">Manon Gaborit est réservable en ligne via <a href="https://www.maiia.com/masseur-kinesitherapeute/44400-reze/manon+gaborit" target="_blank" style="color: var(--deep);">Maiia</a>. Pour les autres praticiens du pôle, contactez-les directement par téléphone.</p>
+        <p style="margin-top: 0.5rem;">Manon Gaborit est réservable en ligne via <a href="https://www.maiia.com/masseur-kinesitherapeute/44200-nantes/gaborit-manon" target="_blank" style="color: var(--deep);">Maiia</a>. Pour les autres praticiens du pôle, contactez-les directement par téléphone.</p>
       </div>
 
       <div class="info-box">
@@ -1064,10 +1074,12 @@ section {
         <h4>Liens utiles</h4>
         <p style="display: flex; flex-direction: column; gap: 0.35rem;">
           <a href="https://hopitalpriveconfluent.vivalto-sante.com" target="_blank" style="color: var(--deep);">Hôpital Privé du Confluent (Vivalto Santé)</a>
+          <a href="https://cpts-sevreetloire.fr" target="_blank" style="color: #3a8a4a;">CPTS Sèvre et Loire</a>
           <a href="https://www.iec-nantes.fr" target="_blank" style="color: #6a8a1a;">Institut de l'Épaule du Confluent (IEC)</a>
-          <a href="https://encoeuretencorps.fr" target="_blank" style="color: #5a8a5c;">Association En Coeur et en Corps</a>
           <a href="https://www.specialiste-pied-cheville.fr" target="_blank" style="color: var(--deep);">Chirurgie du pied et de la cheville — Confluent</a>
           <a href="https://centre-main-sud-loire.fr" target="_blank" style="color: #2a6690;">Centre Main Sud Loire</a>
+          <a href="https://www.doctolib.fr/cabinet-de-kinesitherapie/reze/balneotherapie-du-confluent" target="_blank" style="color: #1a5c6e;">Balnéothérapie du Confluent (Doctolib)</a>
+          <a href="https://encoeuretencorps.fr" target="_blank" style="color: #c75a8a;">Association En Coeur et en Corps</a>
         </p>
       </div>
 
